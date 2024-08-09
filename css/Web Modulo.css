@@ -1,0 +1,1538 @@
+:root{
+    --fondo: #171A6C;
+    --color:white;
+    --fondo2: rgb(80, 80, 80);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*configuracion de contenedor*/
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+ 
+}
+/*configuracion del header*/
+.encabezado{
+    width: 100%;
+    height: 70px;
+    background-color: var(--fondo);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    
+}
+.encabezado .texto {
+  color: #fff;
+    font-family: 'Irish Grover', serif;
+    font-size: 35px; /* Tamaño de letra para párrafos */
+    text-align: left;
+
+     
+}
+.encabezado .encabezado_logo{
+    height: 60px;
+    max-height: 70px;
+   
+}
+.encabezado .encabezado_buscar{
+    display: flex;
+    align-items: center;
+    margin-left: 250px;
+   width: 725px;                                      
+   
+}
+input{
+    width: 400px;
+}
+.encabezado .encabezado_buscar input[type="search"]{
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+.encabezado .encabezado_buscar button{
+    background-color: #007bff;
+    border: 2px solid darkblue;
+    height: 30px;
+    width: 30px;
+    color: white;
+    padding: 5px ;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*arreglar el tamaño de los iconoss*/
+.encabezado .encabezado_iconos{
+    position: relative;
+    padding: 1em;
+    color: var(--color);
+    padding: 20px;
+}
+.encabezado .encabezado_iconos .redes i{
+position: relative;
+right: 40px;
+color: var(--color);
+padding: 10px;
+}
+.encabezado .encabezado_iconos .redes .icon-sn {
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+    
+    
+    .menu{
+        width: 20%;
+        height: 100vh; /*MODIFICADOR PARA HACER MA ABAJO Y ALARGAR EL MENU*/
+        background: linear-gradient(to bottom, #373333, #373333 );
+        flex-direction: column;
+        position:-webkit-sticky;
+        position:fixed;
+       /* padding: 20px;*/
+    
+    }
+    .menu lista li{
+      position: fixed;
+    top: 20px;
+        width: 100px;
+    }
+    .lista{
+    padding-top: 21%;
+    }
+    .menu .lista li a{
+    
+        color: var(--color);
+        text-decoration: none;
+        padding: 15px 20px;
+        border-bottom: 1px solid var(--color);
+        display: block;
+        font-size: 28px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .menu .lista li a:hover{
+      
+        background-color: var(--fondo);
+        border-radius: 5px 2px 0px;
+        font-size: 20px;
+    }
+    .principal{
+        display: flex;
+        height: 100px;
+        background-color: #f0f0f0;
+    }
+    .pie{
+      top: 138vh; /*MODIFICADOR PARA BAJAR EL PIE*/
+        background-color: #1B1B1B;
+        color: var(--color);
+        height: 55px; /*para cambiar el tamaño del pie de pagina*/
+        display: flex;                     
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+      
+    }
+
+.resultado{
+    color: var(--color);
+    font-size: 20px;
+    padding: 1em;
+}
+
+.container{
+display: flex;
+flex-wrap: wrap;
+}
+.card {
+  flex: 1;
+    position: absolute;
+    top: 70px;
+    left: 350px;
+    height: 280px;
+    max-width: 100%;
+    width: 200px; /* Ancho deseado de la imagen */
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    transition: all 400ms ease;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    /*z-index: 9999;  Asegura que la imagen esté encima de todo, quitar de mommento, queda comentado por si acasos */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que la imagen es movible */
+    text-align: center;
+    border-bottom: #1B1B1B ;
+ 
+  }
+  .card:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+  }
+  .card img{
+    width: 100%;
+    height: 220px;
+
+  }
+
+  .card2 {
+    flex: 2;
+    position: absolute;
+    top: 70px;
+    left: 650px;
+    height: 280px;
+    max-width: 100%;
+    width: 200px; /* Ancho deseado de la imagen */
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    transition: all 400ms ease;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+   /* z-index: 9999;  Asegura que la imagen esté encima de todo */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que la imagen es movible */
+    text-align: center;
+   
+  }
+  .card2:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+  }
+  .card2 img{
+    width: 100%;
+    height: 220px;
+
+  }
+
+
+  .card3 {
+    position: absolute;
+    top: 70px;
+    left: 950px;
+    height: 280px;
+    max-width: 100%;
+    width: 200px; /* Ancho deseado de la imagen */
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    transition: all 400ms ease;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    /*z-index: 9999; /* Asegura que la imagen esté encima de todo */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que la imagen es movible */
+    text-align: center;
+  }
+  .card3:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+  }
+  .card3 img{
+    width: 100%;
+    height: 220px;
+  }
+  .card4 {
+    position: absolute;
+    top: 70px;
+    left: 1250px;
+    height: 280px;
+    max-width: 100%;
+    width: 200px; /* Ancho deseado de la imagen */
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    transition: all 400ms ease;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    /*z-index: 9999; /* Asegura que la imagen esté encima de todo */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que la imagen es movible */
+    text-align: center;  
+  }
+  .card4:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+  }
+  .card4 img{
+    width: 100%;
+    height: 220px;
+  }
+  .card5 {
+    position: absolute;
+    top: 380px;
+    left: 1250px;
+    height: 280px;
+    max-width: 100%;
+    width: 200px; /* Ancho deseado de la imagen */
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    transition: all 400ms ease;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    /*z-index: 9999; /* Asegura que la imagen esté encima de todo */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que la imagen es movible */
+    text-align: center;
+  } 
+  .card5:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+  }
+  .card5 img{
+    width: 100%;
+    height: 220px;
+  }
+.card6 {
+  position: absolute;
+  top: 380px;
+  left: 950px;
+  height: 280px;
+  max-width: 100%;
+  width: 200px; /* Ancho deseado de la imagen */
+  margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    transition: all 400ms ease;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+ /* z-index: 9999; /* Asegura que la imagen esté encima de todo */
+  cursor: pointer; /* Cambia el cursor a una mano para indicar que la imagen es movible */
+  text-align: center;
+}
+.card6:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+  }
+  .card6 img{
+    width: 100%;
+    height: 220px;
+  }
+
+.card7 {
+    position: absolute;
+    top: 380px;
+    left: 650px;
+    height: 280px;
+    max-width: 100%;
+    width: 200px; /* Ancho deseado de la imagen */
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    transition: all 400ms ease;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+   /* z-index: 9999; /* Asegura que la imagen esté encima de todo */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que la imagen es movible */
+    text-align: center;
+
+  }
+  .card7:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+  }
+  .card7 img{
+    width: 100%;
+    height: 220px;
+  }
+  .card8 {
+    position: absolute;
+    top: 380px;
+    left: 350px;
+    height: 280px;
+    max-width: 100%;
+    width: 200px; /* Ancho deseado de la imagen */
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    transition: all 400ms ease;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+   /* z-index: 9999; /* Asegura que la imagen esté encima de todo */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que la imagen es movible */
+    text-align: center;
+
+  }
+  .card8:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+  }
+  .card8 img{
+    width: 100%;
+    height: 220px;
+  }
+  .card9 {
+    position: absolute;
+    top: 690px;
+    left: 350px;
+    height: 280px;
+    max-width: 100%;
+    width: 200px; /* Ancho deseado de la imagen */
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    transition: all 400ms ease;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+   /* z-index: 9999; /* Asegura que la imagen esté encima de todo */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que la imagen es movible */
+    text-align: center;
+
+  }
+  .card9:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+  }
+  .card9 img{
+    width: 100%;
+    height: 220px;
+  }
+
+
+  .card10 {
+    position: absolute;
+    top: 690px;
+    left: 950px;
+    height: 280px;
+    max-width: 100%;
+    width: 200px; /* Ancho deseado de la imagen */
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    transition: all 400ms ease;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+   /* z-index: 9999; /* Asegura que la imagen esté encima de todo */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que la imagen es movible */
+    text-align: center;
+
+  }
+  .card10:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+  }
+  .card10 img{
+    width: 100%;
+    height: 220px;
+  }
+  .card11 {
+    position: absolute;
+    top: 690px;
+    left: 650px;
+    height: 280px;
+    max-width: 100%;
+    width: 200px; /* Ancho deseado de la imagen */
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    transition: all 400ms ease;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+   /* z-index: 9999; /* Asegura que la imagen esté encima de todo */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que la imagen es movible */
+    text-align: center;
+
+  }
+  .card11:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+  }
+  .card11 img{
+    width: 100%;
+    height: 220px;
+  }
+
+
+  .card12 {
+    position: absolute;
+    top: 690px;
+    left: 1250px;
+    height: 280px;
+    max-width: 100%;
+    width: 200px; /* Ancho deseado de la imagen */
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    transition: all 400ms ease;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+   /* z-index: 9999; /* Asegura que la imagen esté encima de todo */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que la imagen es movible */
+    text-align: center;
+
+  }
+  .card12:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+  }
+  .card12 img{
+    width: 100%;
+    height: 220px;
+  }
+
+  /* Estilos para la ventana emergente */
+.popup {
+  display: none; /* Ocultamos la ventana emergente por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  z-index: 1000; /* Asegura que el popup esté por encima de otros elementos */
+}
+
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 500px;
+}
+.popup img{   /*DUPLICAR PARA AJUSTAR LA IMAGEN DE LA VISTA EMERGENTE*/
+  width: 30%;
+  height: auto;
+  margin-left: 40%;
+  }
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+/*para decorar 2do y 3er popup*/
+.close-btn:hover,
+    .close-btn:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .product-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+/*hasta ahi*/
+
+
+.popup{      /*DUPLICAR MOSTRAR LA VISTA EMERGENTE*/
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 1000;
+backdrop-filter: blur(5px); /*PARA DESENFONQUE DE LA PARTE DE ATRAS DEL POPUP*/
+}
+
+.popup img{   /*DUPLICAR PARA AJUSTAR LA IMAGEN DE LA VISTA EMERGENTE*/
+  width: 50%;
+  height: 250px;
+  margin-left: 25%;
+  }
+  .popup button{   /*DUPLICAR PARA AJUSTAR EL BOTON DE LA VISTA EMERGENTE*/
+    margin-top: 20px;
+    margin-left: 35%;
+    background-color: orange;
+    width: 30%;
+    height: 50%;     
+     font-size: 20px;
+cursor: pointer;
+    border-radius: 40px;
+    }
+
+    .popup2 {
+      display: none; /* Ocultamos la ventana emergente por defecto */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+      z-index: 1000; /* Asegura que el popup esté por encima de otros elementos */
+    }
+    .popup-content2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      width: 80%;
+      max-width: 500px;
+    }
+    .close-btn2 {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 24px;
+    }
+.popup2{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px); /*PARA DESENFONQUE DE LA PARTE DE ATRAS DEL POPUP*/
+  }
+  .popup2 img{   /*DUPLICAR PARA AJUSTAR LA IMAGEN DE LA VISTA EMERGENTE*/
+   width: 60%;
+   height: auto;
+    margin-left: 20%;
+    }
+    .popup2 button{   /*DUPLICAR PARA AJUSTAR EL BOTON DE LA VISTA EMERGENTE*/
+
+   margin-top: 20px;
+   margin-left: 35%;
+  background-color: orange;
+  width: 30%;
+  height: 50%;     
+  font-size: 20px;
+   border-radius: 40px;    
+  }
+/*para decorar 2do y 3er popup*/
+.close-btn:hover,
+    .close-btn:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .product-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+/*hasta ahi*/
+
+
+  
+  .popup3 {
+    display: none; /* Ocultamos la ventana emergente por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    z-index: 1000; /* Asegura que el popup esté por encima de otros elementos */
+  }
+  .popup-content3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+  }
+  .close-btn3 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+    .popup3{
+    position: fixed;
+    top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        backdrop-filter: blur(5px); /*PARA DESENFONQUE DE LA PARTE DE ATRAS DEL POPUP*/
+        }
+        .popup3 img{   /*DUPLICAR PARA AJUSTAR LA IMAGEN DE LA VISTA EMERGENTE*/
+          width: 60%;
+          height: auto;
+          margin-left: 20%;
+          }
+          .popup3 button{   /*DUPLICAR PARA AJUSTAR EL BOTON DE LA VISTA EMERGENTE*/
+      
+            margin-top: 20px;
+            margin-left: 35%;
+            background-color: orange;
+            width: 30%;
+            height: 50%;     
+             font-size: 20px;
+       border-radius: 40px;
+            }
+            /*para decorar 2do y 3er popup*/
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/*hasta ahi*/
+            .popup4 {
+              display: none; /* Ocultamos la ventana emergente por defecto */
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+              z-index: 1000; /* Asegura que el popup esté por encima de otros elementos */
+            }
+            .popup-content4 {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              background: #fff;
+              padding: 20px;
+              border-radius: 5px;
+              width: 80%;
+              max-width: 500px;
+            }
+            .close-btn4 {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              cursor: pointer;
+              font-size: 24px;
+            }
+            .popup4{      /*DUPLICAR MOSTRAR LA VISTA EMERGENTE*/
+ position: fixed;
+ top: 0;
+ left: 0;
+  width: 100%;
+  height: 100%;
+ background: rgba(0, 0, 0, 0.5);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+  z-index: 1000;
+    backdrop-filter: blur(5px); /*PARA DESENFONQUE DE LA PARTE DE ATRAS DEL POPUP*/
+              }
+              
+              .popup4 img{   /*DUPLICAR PARA AJUSTAR LA IMAGEN DE LA VISTA EMERGENTE*/
+                width: 50%;
+                height: auto;
+                margin-left: 20%;
+                }
+                .popup4 button{   /*DUPLICAR PARA AJUSTAR EL BOTON DE LA VISTA EMERGENTE*/
+              
+                  margin-top: 20px;
+                  margin-left: 35%;
+                  background-color: orange;
+                  width: 30%;
+                  height: 50%;     
+                   font-size: 20px;
+              cursor: pointer;
+                  border-radius: 40px;
+                  
+                  }
+/*para decorar 2do y 3er popup*/
+.close-btn:hover,
+    .close-btn:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .product-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+/*hasta ahi*/
+
+                  .popup5 {
+                    display: none; /* Ocultamos la ventana emergente por defecto */
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+                    z-index: 1000; /* Asegura que el popup esté por encima de otros elementos */
+                  }
+                  .popup-content5 {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: #fff;
+                    padding: 20px;
+                    border-radius: 5px;
+                    width: 80%;
+                    max-width: 500px;
+                  }
+                  .close-btn5 {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    cursor: pointer;
+                    font-size: 24px;
+                  }
+                  .popup5{      /*DUPLICAR MOSTRAR LA VISTA EMERGENTE*/
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.5);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 1000;
+                    backdrop-filter: blur(5px); /*PARA DESENFONQUE DE LA PARTE DE ATRAS DEL POPUP*/
+                    }
+                    
+                    .popup5 img{   /*DUPLICAR PARA AJUSTAR LA IMAGEN DE LA VISTA EMERGENTE*/
+                      width: 50%;
+                      height: auto;
+                      margin-left: 20%;
+                      }
+                      .popup5 button{   /*DUPLICAR PARA AJUSTAR EL BOTON DE LA VISTA EMERGENTE*/
+                    
+                        margin-top: 20px;
+                        margin-left: 35%;
+                        background-color: orange;
+                        width: 30%;
+                        height: 50%;     
+                         font-size: 20px;
+                    cursor: pointer;
+                        border-radius: 40px;
+                        }
+/*para decorar 2do y 3er popup*/
+.close-btn:hover,
+    .close-btn:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .product-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+/*hasta ahi*/
+                        .popup6 {
+                          display: none; /* Ocultamos la ventana emergente por defecto */
+                          position: fixed;
+                          top: 0;
+                          left: 0;
+                          width: 100%;
+                          height: 100%;
+                          background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+                          z-index: 1000; /* Asegura que el popup esté por encima de otros elementos */
+                        }
+                        .popup-content6 {
+                          position: absolute;
+                          top: 50%;
+                          left: 50%;
+                          transform: translate(-50%, -50%);
+                          background: #fff;
+                          padding: 20px;
+                          border-radius: 5px;
+                          width: 80%;
+                          max-width: 500px;
+                        }
+                        .close-btn6 {
+                          position: absolute;
+                          top: 10px;
+                          right: 10px;
+                          cursor: pointer;
+                          font-size: 24px;
+                        }
+                        .popup6{      /*DUPLICAR MOSTRAR LA VISTA EMERGENTE*/
+                          position: fixed;
+                          top: 0;
+                          left: 0;
+                          width: 100%;
+                          height: 100%;
+                          background: rgba(0, 0, 0, 0.5);
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          z-index: 1000;
+                          backdrop-filter: blur(5px); /*PARA DESENFONQUE DE LA PARTE DE ATRAS DEL POPUP*/
+                          }
+                          
+                          .popup6 img{   /*DUPLICAR PARA AJUSTAR LA IMAGEN DE LA VISTA EMERGENTE*/
+                            width: 50%;
+                            height: auto;
+                            margin-left: 20%;
+                            }
+                            .popup6 button{   /*DUPLICAR PARA AJUSTAR EL BOTON DE LA VISTA EMERGENTE*/
+                          
+                              margin-top: 20px;
+                              margin-left: 35%;
+                              background-color: orange;
+                              width: 30%;
+                              height: 50%;     
+                               font-size: 20px;
+                          cursor: pointer;
+                              border-radius: 40px;
+                              
+                              }
+                              /*para decorar 2do y 3er popup*/
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/*hasta ahi*/
+                              .popup7 {
+                                display: none; /* Ocultamos la ventana emergente por defecto */
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+                                z-index: 1000; /* Asegura que el popup esté por encima de otros elementos */
+                              }
+                              .popup-content7 {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                background: #fff;
+                                padding: 20px;
+                                border-radius: 5px;
+                                width: 80%;
+                                max-width: 500px;
+                              }
+                              .close-btn7 {
+                                position: absolute;
+                                top: 10px;
+                                right: 10px;
+                                cursor: pointer;
+                                font-size: 24px;
+                              }
+                             .popup7{      /*DUPLICAR MOSTRAR LA VISTA EMERGENTE*/
+                             position: fixed;
+                             top: 0;
+                             left: 0;
+                             width: 100%;
+                             height: 100%;
+                             background: rgba(0, 0, 0, 0.5);
+                             display: flex;
+                             align-items: center;
+                             justify-content: center;
+                             z-index: 1000;
+                             backdrop-filter: blur(5px); /*PARA DESENFONQUE DE LA PARTE DE ATRAS DEL POPUP*/
+                               }
+                             .popup7 img{   /*DUPLICAR PARA AJUSTAR LA IMAGEN DE LA VISTA EMERGENTE*/
+                              width: 50%;
+                              height: auto;
+                              margin-left: 20%;
+                             }
+                          .popup7 button{   /*DUPLICAR PARA AJUSTAR EL BOTON DE LA VISTA EMERGENTE*/
+                              margin-top: 20px;
+                              margin-left: 35%;
+                              background-color: orange;
+                              width: 30%;
+                               height: 50%;     
+                              font-size: 20px;
+                              cursor: pointer;
+                              border-radius: 40px;
+                                                                    
+                            }
+          /*para decorar 2do y 3er popup*/
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/*hasta ahi*/
+    .popup8 {
+      display: none; /* Ocultamos la ventana emergente por defecto */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+      z-index: 1000; /* Asegura que el popup esté por encima de otros elementos */
+    }
+    .popup-content8 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      width: 80%;
+      max-width: 500px;
+    }
+    .close-btn8 {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 24px;
+    }
+   .popup8{      /*DUPLICAR MOSTRAR LA VISTA EMERGENTE*/
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 1000;
+   backdrop-filter: blur(5px); /*PARA DESENFONQUE DE LA PARTE DE ATRAS DEL POPUP*/
+     }
+   .popup8 img{   /*DUPLICAR PARA AJUSTAR LA IMAGEN DE LA VISTA EMERGENTE*/
+    width: 50%;
+    height: auto;
+    margin-left: 20%;
+   }
+.popup8 button{   /*DUPLICAR PARA AJUSTAR EL BOTON DE LA VISTA EMERGENTE*/
+    margin-top: 20px;
+    margin-left: 35%;
+    background-color: orange;
+    width: 30%;
+     height: 50%;     
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 40px;
+                                          
+  }
+/*para decorar 2do y 3er popup*/
+.close-btn:hover,
+    .close-btn:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .product-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+/*hasta ahi*/
+  .popup9 {
+    display: none; /* Ocultamos la ventana emergente por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    z-index: 1000; /* Asegura que el popup esté por encima de otros elementos */
+  }
+  .popup-content9 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+  }
+  .close-btn9 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+.popup9{      /*DUPLICAR MOSTRAR LA VISTA EMERGENTE*/
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 1000;
+backdrop-filter: blur(5px); /*PARA DESENFONQUE DE LA PARTE DE ATRAS DEL POPUP*/
+  }
+.popup9 img{   /*DUPLICAR PARA AJUSTAR LA IMAGEN DE LA VISTA EMERGENTE*/
+ width: 50%;
+ height: auto;
+ margin-left: 20%;
+}
+.popup9 button{   /*DUPLICAR PARA AJUSTAR EL BOTON DE LA VISTA EMERGENTE*/
+ margin-top: 20px;
+ margin-left: 35%;
+ background-color: orange;
+ width: 30%;
+  height: 50%;     
+ font-size: 20px;
+ cursor: pointer;
+ border-radius: 40px;
+                                       
+}
+/*para decorar 2do y 3er popup*/
+.close-btn:hover,
+    .close-btn:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .product-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+/*hasta ahi*/
+.popup10 {
+  display: none; /* Ocultamos la ventana emergente por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  z-index: 1000; /* Asegura que el popup esté por encima de otros elementos */
+}
+.popup-content10 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 500px;
+}
+.close-btn10 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+.popup10{      /*DUPLICAR MOSTRAR LA VISTA EMERGENTE*/
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 1000;
+backdrop-filter: blur(5px); /*PARA DESENFONQUE DE LA PARTE DE ATRAS DEL POPUP*/
+}
+.popup10 img{   /*DUPLICAR PARA AJUSTAR LA IMAGEN DE LA VISTA EMERGENTE*/
+width: 50%;
+height: auto;
+margin-left: 20%;
+}
+.popup10 button{   /*DUPLICAR PARA AJUSTAR EL BOTON DE LA VISTA EMERGENTE*/
+margin-top: 20px;
+margin-left: 35%;
+background-color: orange;
+width: 30%;
+height: 50%;     
+font-size: 20px;
+cursor: pointer;
+border-radius: 40px;
+                                     
+}
+/*para decorar 2do y 3er popup*/
+.close-btn:hover,
+    .close-btn:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .product-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+/*hasta ahi*/
+
+.popup11 {
+  display: none; /* Ocultamos la ventana emergente por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  z-index: 1000; /* Asegura que el popup esté por encima de otros elementos */
+}
+.popup-content11 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 500px;
+}
+.close-btn11 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+.popup11{      /*DUPLICAR MOSTRAR LA VISTA EMERGENTE*/
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 1000;
+backdrop-filter: blur(5px); /*PARA DESENFONQUE DE LA PARTE DE ATRAS DEL POPUP*/
+}
+.popup11 img{   /*DUPLICAR PARA AJUSTAR LA IMAGEN DE LA VISTA EMERGENTE*/
+width: 50%;
+height: auto;
+margin-left: 20%;
+}
+.popup11 button{   /*DUPLICAR PARA AJUSTAR EL BOTON DE LA VISTA EMERGENTE*/
+margin-top: 20px;
+margin-left: 35%;
+background-color: orange;
+width: 30%;
+height: 50%;     
+font-size: 20px;
+cursor: pointer;
+border-radius: 40px;
+                                     
+}
+/*para decorar 2do y 3er popup*/
+.close-btn:hover,
+    .close-btn:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .product-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+/*hasta ahi*/
+
+.popup12 {
+  display: none; /* Ocultamos la ventana emergente por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  z-index: 1000; /* Asegura que el popup esté por encima de otros elementos */
+}
+.popup-content12 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 500px;
+}
+.close-btn12 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+.popup12{      /*DUPLICAR MOSTRAR LA VISTA EMERGENTE*/
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 1000;
+backdrop-filter: blur(5px); /*PARA DESENFONQUE DE LA PARTE DE ATRAS DEL POPUP*/
+}
+.popup12 img{   /*DUPLICAR PARA AJUSTAR LA IMAGEN DE LA VISTA EMERGENTE*/
+width: 50%;
+height: auto;
+margin-left: 20%;
+}
+.popup12 button{   /*DUPLICAR PARA AJUSTAR EL BOTON DE LA VISTA EMERGENTE*/
+margin-top: 20px;
+margin-left: 35%;
+background-color: orange;
+width: 30%;
+height: 50%;     
+font-size: 20px;
+cursor: pointer;
+border-radius: 40px;
+                                     
+}
+
+
+
+
+
+.popup-content {
+background: #fff;
+padding: 20px;
+border-radius: 10px;
+width: 80%;
+max-width: 500px;
+position: relative;
+}
+
+.close-btn {
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 24px;
+cursor: pointer;
+}
+
+
+
+.popup p{
+  padding-top: 8px;
+ margin-left: 5px;
+ 
+ height: auto;
+  }
+.precio{
+  color: black;
+  font-size:x-large;
+  }
+
+  
+  
+  
